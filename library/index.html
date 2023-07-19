@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labrary</title>
+    <title>Library</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
         <div class="container header_container">
-          <span>Brooklyn Public Library</span>
-          <naw class="naw">
+          <h1 class="header_title">Brooklyn Public Library</h1>
+          <naw class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#favorites" class="nav-link">Favorites</a></li>
@@ -18,13 +19,42 @@
                 <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
                 <li class="nav-item"><a href="#library_card" class="nav-link">Library Card</a></li>
             </ul>
-          </naw>  
-          <svg>
-            <use href="assets/img//icon.svg#logo"/>
+          </naw> 
+          <svg class="icon_profile">
+            <use href="assets/img/icon.svg#icon"/>
           </svg>
-          <img src="assets/img/icon_profile.png" alt="icon_profile"/>
         </div>
     </header>
+    <main>
+        <section class="welcom" id="welcom">
+            <div class="welcome_block">
+                <div class="welcom_text">
+           <br>Welcome</br>
+           to the Brooklyn</br> 
+          Library</p>
+        </div>
+        </div>
+        </section>
+        <section class="about" id="about">
+           <h2 class="title">About</h2>
+           <div class="line"></div>
+           <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
+           <div class="about_images">
+            <div class="about-img1"></div>
+            <div class="about-img2"></div>
+            <div class="about-img3"></div>
+        </div>
+        <svg class="carousel_pagination">
+            <use href="assets/img/carousel.svg#carousel"/>
+         </svg>           
+        </section>
+        <section class="favorites" id="favorites">
+            <h2 class="title">Favorites</h2>
+            <div class="line"></div>
+            <div class="d">
+            <p class="favorites-text">Pick favorites of season</p>
+        </div></section>
+    </main>
     
 </body>
 </html>
