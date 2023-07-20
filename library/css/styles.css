@@ -39,13 +39,13 @@ align-content: center;
 align-items: baseline;
 }
 
-.nav{
+/* .nav{
     align-self: center;
-}
+} */
 
 ul {
     flex-wrap: wrap;
-    display: inline-flex;
+    display: inline-flex;    
 gap: 30px;
 height: 50px;
 align-content: center;
@@ -186,9 +186,6 @@ margin: 40px 0px;
   align-items: center;
 }
 
-.d{
-  display: flex;
-}
 .favorites-text{
 color: #000;
 text-align: center;
@@ -198,4 +195,49 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 margin: 40px 20px;
+align-self: flex-start;
+}
+
+.seasons{
+  flex-wrap: wrap;
+  display: inline-flex; 
+  justify-content: flex-start; 
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+.seasons-radio{
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+  padding-right: 90px;
+}
+
+.seasons-radio-selected{
+color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+padding-left: 20px;
+padding-right: 90px;
+}
+
+.group{
+width: 17px;
+height: 17px;
+flex-shrink: 0;
+}
+
+.favorites-items{
+
+}
+
+.coffee_shop{
+  
 }
