@@ -184,6 +184,8 @@ margin: 40px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 1440px;
+  height: 1439px;
 }
 
 .favorites-text{
@@ -235,7 +237,53 @@ flex-shrink: 0;
 }
 
 .favorites-items{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+}
 
+.favorite-item{
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  list-style-type: none;
+}
+
+
+favorite-item h3{
+
+}
+
+.book_1{
+  background: url(../assets/img/book_1.png), lightgray 50% / cover no-repeat;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+}
+.book_2{
+  background: url(../assets/img/book_2.png), lightgray 50% / cover no-repeat;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.book_3{
+  background: url(../assets/img/book_3.png), lightgray 50% / cover no-repeat;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.book_4{
+  background: url(../assets/img/book_4.png), lightgray 50% / cover no-repeat;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
 }
 
 .coffee_shop{
