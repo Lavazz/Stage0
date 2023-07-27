@@ -1,10 +1,5 @@
 @import url(fonts.css);
 
-/* :root{
-box-sizing: border-box;
-width: 1440px;
-} */
-
 html{
   background-color: grey;
 }
@@ -26,7 +21,12 @@ img{
 }
 
 .container{
+display: flex;
+}
 
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+font-weight: inherit;
 }
 
 .header{
