@@ -1,8 +1,19 @@
 @import url(fonts.css);
 
-:root{
+/* :root{
 box-sizing: border-box;
 width: 1440px;
+} */
+
+html{
+  background-color: grey;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
 }
 
 
@@ -15,7 +26,7 @@ img{
 }
 
 .container{
-display: flex;
+
 }
 
 .header{
@@ -362,7 +373,7 @@ width: 100px;
 height: 1px;
 background: #BB945F;
 margin: 1px;
-vertical-align: middle 
+vertical-align: middle; 
 }
 
 .menu_items{
@@ -531,10 +542,48 @@ background: #FFF;
 
 }
 
+.input_card_form{
+  background: #BB945F;
+  width: 560px;
+height: 272px;
+flex-shrink: 0;
+}
+
+.input_card{
+  border-radius: 10px;
+background: #FFF;
+width: 520px;
+height: 66px;
+flex-shrink: 0;
+}
+
+.card_button{
+padding: 10px 40px;
+border-radius: 2px;
+border: 1px solid #0C0C0E;
+width: 242px;
+height: 44px;
+margin: 0 auto; 
+display: block;
+margin-top: 20px;
+display: flex;
+align-items: center;
+}
+
+.card_button_text{
+  color: #0C0C0E;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
 footer{
-width: 1440px;
-height: 250px;
-background: #0C0C0E;;
+  width: 1440px;
+  height: 250px;
+background: #0C0C0E;
 }
 
 footer p{
@@ -552,4 +601,101 @@ font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 100% */
 letter-spacing: 2px;
+}
+
+.top_of_footer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-between;
+  width: 1400px;
+  height: 90px;
+  gap: 1000px;
+  margin: 0px 20px 30px 20px;
+  padding-top: 20px;
+}
+
+.address{
+width: 250px;
+height: 40px;
+color: #FFF;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 133.333% */
+padding-bottom: 10px;
+}
+
+.work_time{
+  color: #FFF;
+text-align: right;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 133.333% */
+width: 149px;
+height: 40px;
+margin-left: auto;
+}
+
+.footer_icons{
+display: flex;
+flex-direction: row;
+gap: 15px;
+}
+
+.icon_messanger{
+width: 24px;
+height: 24px;
+}
+
+
+
+.footer_line{
+  width: 1400px;
+  height: 1px;
+  background: #FFF;
+  align-self: center; 
+  margin-left: 20px;
+}
+
+.bottom_footer{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 44px 20px;
+align-items: baseline;
+}
+
+.year{
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 100% */
+letter-spacing: 2px;
+}
+
+.rss{
+  color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 100% */
+}
+
+.username{
+  color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 200% */
 }

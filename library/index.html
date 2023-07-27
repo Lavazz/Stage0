@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <div class="wrapper">
     <header class="header">
         <div class="container header_container">
           <h1 class="header_title">Brooklyn Public Library</h1>
@@ -252,11 +253,14 @@
         <div class="library_action">
             <div class="find_card"><p class="find_text">Find your Library card</p>
             <div class="card_bg">
-                <p>Brooklyn Public Library</p>
+               
 <form class="card_bg_form">
-    <input type="text" placeholder="Reader's name"><br><br>
-    <input type="text" placeholder="Card number"><br><br>
-    <input type="submit" value="Check the card">
+    <div class="input_card_form">
+    <p>Brooklyn Public Library</p>
+    <input class="input_card" type="text" placeholder="Reader's name"><br><br>
+    <input class="input_card" type="text" placeholder="Card number"><br><br>
+</div>
+    <button type="submit"  class="card_button"><p class="card_button_text">Check the card</p></button>
 </form>
             </div></div>
             <div class="get_card"><p class="get_text">Get a reader card</p>
@@ -268,9 +272,34 @@
        </section>
     </main>
     <footer>
-        <p>The Rolling Scopes School</p>
-    </footer>
-    
+        <div class="top_of_footer">
+            <div>
+                <div class="address">286 Cadman Plaza, New York, NY 11238, United States</div>
+                <div class="footer_icons">
+                    <svg class="icon_messanger">
+                        <use href="assets/img/twitter.svg#twitter"/>
+                      </svg>
+                      <svg class="icon_messanger">
+                        <use href="assets/img/instagram.svg#insta"/>
+                      </svg>
+                      <svg class="icon_messanger">
+                        <use href="assets/img/facebook.svg#facebook"/>
+                      </svg>
+                </div>
+            </div>
+<div>
+<div class="work_time">Mon - Fri <br> 08:00 am - 07:00 pm</div>
+<div class="work_time">Sat - Sun <br> 10:00 am - 06:00 pm</div>
+</div>
+        </div>
+        <div class="footer_line"></div>
+        <div class="bottom_footer">
+<div class="year">2023</div>
+<div class="rss">The Rolling Scopes School</div>
+<div class="username">Katsiaryna Kaloshych</div>
+        </div>
+    </footer> 
+ </div>  
 </body>
 </html>
     
