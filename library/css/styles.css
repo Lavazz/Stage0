@@ -33,15 +33,12 @@ font-weight: 400;
 line-height: 50px; /* 166.667% */
 letter-spacing: 0.6px;
 padding: 20px;
-margin: 0;
+margin: 0px;
+margin-right: 380px;
 height: 50px;
 align-content: center;
 align-items: baseline;
 }
-
-/* .nav{
-    align-self: center;
-} */
 
 ul {
     flex-wrap: wrap;
@@ -69,7 +66,6 @@ height: 50px;
   .icon_profile{
     width: 28px;
     height: 28px;
-    flex-shrink: 0;
     padding: 31px 20px 31px 20px;
     margin-left:auto;
   }
@@ -313,10 +309,9 @@ margin-top: 40px;
 display: flex;
 flex-direction: row;
 width: 1440px;
-padding: 20px 20px 40px 20px;
+padding: 40px 20px 0px 20px;
 align-items: center;
 gap: 480px;
-/* padding: 20px; */
 }
 
 .coffee_menu{
@@ -435,12 +430,105 @@ text-transform: capitalize;
   display: flex;
   flex-direction: column;
   align-items: center;
+height: 515px;
+}
+
+.contacts_info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 20px 40px 20px;
+  gap:201px;
+}
+
+.text_info{
+width: 503px;
+height: 380px;
+color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 200% */
+text-transform: capitalize;
+margin-left:auto;
+}
+
+.phone_info{
+width: 503px;
+height: 160px;
+padding-bottom: 40px;
+}
+
+
+.map{
+  width: 696px;
+  height: 414px;
+background: url(../assets/img/map.png), lightgray 50% / cover no-repeat;
 }
 
 .library_card{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 1440px;
+height: 614px;
+}
+
+.library_action{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start
+}
+
+.find_card{
+  width: 600px;
+  height: 453px;
+  margin-left: auto;
+}
+
+.find_text{
+  color: #000;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.6px;
+}
+
+.get_card{
+  width: 456px;
+  height: 253px;
+  margin-left: 344px;
+}
+
+.get_text{
+  color: #000;
+text-align: center;
+font-family: Forum;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.6px;
+}
+
+.text_info{
+  width: 503px;
+  height: 380px;
+}
+
+.card_bg{
+width: 600px;
+height: 386px;
+flex-shrink: 0;
+border: 3px solid #BB945F;
+background: #FFF;
+}
+
+.card_bg_form{
+
 }
 
 footer{
