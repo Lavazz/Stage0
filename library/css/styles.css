@@ -348,21 +348,11 @@ margin-top: 40px;
 }
 
 .coffee_menu{
-/* display: inline-flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-gap: 40px; */
 width: 438px;
 height: 520px;
 }
 
 .dessert_menu{
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  gap: 40px; */
   width: 482px;
   height: 520px;
 
