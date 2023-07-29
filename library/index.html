@@ -30,7 +30,7 @@
             <section class="welcom" id="welcom">
                <div class="welcome_block">
                   <div class="welcom_text">
-                     <h3>Welcome<br>
+                     <h3><span>Welcome</span><br>
                         to the Brooklyn<br> 
                         Library
                      </h3>
@@ -55,22 +55,22 @@
                <div class="line"></div>
                <p class="favorites-text">Pick favorites of season</p>
                <form class="seasons">
-                  <div>
+                <div class="form_radio">
                      <input type="radio" id="winter" name="seasons" value="winter" class="group"
                         checked>
-                     <label for="winter" class="seasons-radio-selected">Winter</label>
+                     <label for="winter">Winter</label>
                   </div>
-                  <div>
+                  <div class="form_radio">
                      <input type="radio" id="spring" name="seasons" value="spring">
-                     <label for="spring" class="seasons-radio">Spring</label>
+                     <label for="spring">Spring</label>
                   </div>
-                  <div>
+                  <div class="form_radio">
                      <input type="radio" id="summer" name="seasons" value="summer">
-                     <label for="summer" class="seasons-radio">Summer</label>
+                     <label for="summer">Summer</label>
                   </div>
-                  <div>
+                  <div class="form_radio">
                      <input type="radio" id="autumn" name="seasons" value="autumn">
-                     <label for="autumn" class="seasons-radio">Autumn</label>
+                     <label for="autumn">Autumn</label>
                   </div>
                </form>
                <ul class="favorites-items">
@@ -233,13 +233,13 @@
                <div class="line"></div>
                <div class="contacts_info">
                   <div class="text_info">
-                     <h3>For all Library inquiries:</h3>
+                     <b class="text_info_h">For all Library inquiries:</b>
                      <div class="phone_info">
                         <p>Please call (617) 730-2370</p>
                         <p>For TTY service, please call (617) 730-2370</p>
                         <p>Putterham Library: (617) 730-2385</p>
                      </div>
-                     <h3>Senior Staff</h3>
+                     <b>Senior Staff</b>
                      <p>Library Director: <span><b>Amanda Hirst</b></span></p>
                   </div>
                   <div class="map"></div>
@@ -275,28 +275,29 @@
             <div class="top_of_footer">
                <div>
                   <div class="address">286 Cadman Plaza, New York, NY 11238, United States</div>
-                  <div class="footer_icons">
-                     <svg class="icon_messanger">
+                  <ul class="footer_icons">
+                    <li><a href='https://twitter.com'><svg class="icon_messanger">
                         <use href="assets/img/twitter.svg#twitter"/>
-                     </svg>
-                     <svg class="icon_messanger">
+                     </svg></a></li> 
+                    <li><a href='https://www.instagram.com/'><svg class="icon_messanger">
                         <use href="assets/img/instagram.svg#insta"/>
-                     </svg>
-                     <svg class="icon_messanger">
+                     </svg></a></li>
+                     <li><a href="https://ru-ru.facebook.com/"><svg class="icon_messanger">
                         <use href="assets/img/facebook.svg#facebook"/>
                      </svg>
-                  </div>
+                    </a></li>
+                  </ul>
                </div>
                <div>
-                  <div class="work_time">Mon - Fri <br> 08:00 am - 07:00 pm</div>
-                  <div class="work_time">Sat - Sun <br> 10:00 am - 06:00 pm</div>
+                  <div class="work_time">Mon - Fri  08:00 am - 07:00 pm</div>
+                  <div class="work_time">Sat - Sun  10:00 am - 06:00 pm</div>
                </div>
             </div>
             <div class="footer_line"></div>
             <div class="bottom_footer">
                <div class="year">2023</div>
-               <div class="rss">The Rolling Scopes School</div>
-               <div class="username">Katsiaryna Kaloshych</div>
+               <a href="https://rs.school/js-stage0/"><div class="rss">The Rolling Scopes School</div></a>
+               <a href="https://github.com/Lavazz/rsschool-cv"><div  class="username">Lavazz</div></a>
             </div>
          </footer>
       </div>
