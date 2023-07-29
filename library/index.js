@@ -1,4 +1,4 @@
-console.log('MY SCORE 84');
+console.log('MY SCORE 82');
 
 const output = "valid layout +10\n"+ 
 "semantic layout +16\n"+
