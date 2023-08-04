@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Library</title>
       <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/media.css">
       <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
    </head>
    <body>
@@ -20,10 +21,15 @@
                      <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
                      <li class="nav-item"><a href="#library_card" class="nav-link">Library Card</a></li>
                   </ul>
-               </nav>
+               </nav>                         
                <svg class="icon_profile">
                   <use href="assets/img/icon.svg#icon"/>
                </svg>
+               <div>  
+               <button class="nav-button">
+                  <img src="/assets/img/burger.svg" alt="burger-nav">
+               </button>
+            </div>
             </div>
          </header>
          <main>
@@ -40,15 +46,36 @@
             <section class="about" id="about">
                <h2 class="title">About</h2>
                <div class="line"></div>
-               <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
+               <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a<br> cozy coffee shop inside</p>
                <div class="about_images">
+                  <div class="img_carret">
+                     <div class="carret_left"></div>
                   <div class="about-img1"></div>
+                  <div class="carret_right"></div>
                   <div class="about-img2"></div>
                   <div class="about-img3"></div>
                </div>
-               <svg class="carousel_pagination">
-                  <use href="assets/img/carousel.svg#carousel"/>
-               </svg>
+               </div>
+               <div class="carousel">
+                  <div class="carousel_container">
+                    <button
+                      type="button"
+                      class="carousel_active"
+                    ></button>
+                  </div>
+                  <div class="carousel-container">
+                    <button type="button" class="carousel_button"></button>
+                  </div>
+                  <div class="button-container">
+                    <button type="button" class="carousel_button"></button>
+                  </div>
+               <div class="carousel-container">
+                    <button type="button" class="carousel_button_tabl"></button>
+                  </div>
+                  <div class="button-container">
+                    <button type="button" class="carousel_button_tabl"></button>
+                  </div>
+                </div>
             </section>
             <section class="favorites" id="favorites">
                <h2 class="title">Favorites</h2>
@@ -167,7 +194,7 @@
                         </li>
                      </ul>
                   </div>
-                  <div class="dessert_menu">
+                  <!-- <div class="dessert_menu">
                      <h3>Desserts & Cakes</h3>
                      <ul class="menu_items">
                         <li class="menu_item_add">
@@ -225,7 +252,7 @@
                            <span class="menu_price">$14</span>
                         </li>
                      </ul>
-                  </div>
+                  </div> -->
                </div>
             </section>
             <section class="contacts" id="contacts">
@@ -242,7 +269,7 @@
                      <b>Senior Staff</b>
                      <p>Library Director: <span><b>Amanda Hirst</b></span></p>
                   </div>
-                  <div class="map"></div>
+                  <!-- <div class="map"></div> -->
                </div>
             </section>
             <section class="library_card" id="library_card">
@@ -262,12 +289,12 @@
                         </form>
                      </div>
                   </div>
-                  <div class="get_card">
+                  <!-- <div class="get_card">
                      <p class="get_text">Get a reader card</p>
                      <p>You will be able to see a reader card after logging into account or you can register a new account</p>
                      <button>Sign Up</button>
                      <button>Log in</button>
-                  </div>
+                  </div> -->
                </div>
             </section>
          </main>
