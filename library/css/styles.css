@@ -264,7 +264,7 @@ margin: 40px 20px;
 align-self: flex-start;
 }
 
-.seasons{
+/* .seasons{
   flex-wrap: wrap;
   display: inline-flex; 
   justify-content: flex-start; 
@@ -285,7 +285,7 @@ background: url('../assets/img/radiobutton.svg') 0 0 no-repeat;;
 }
 
 /* Checked */
-.form_radio input[type=radio]:checked + label:before {
+/* .form_radio input[type=radio]:checked + label:before {
 	background: url('../assets/img/radiobutton.svg') 0 0 no-repeat;
 }
 
@@ -304,6 +304,40 @@ padding-right: 90px;
 width: 17px;
 height: 17px;
 flex-shrink: 0;
+} */ 
+
+.form_radio {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding-left: 17px;
+  padding-top: 2px;
+}
+
+.seasons {
+  list-style-type: none;
+  display: flex;
+  gap: 90px;
+  align-self: flex-start;
+}
+
+.group {
+  margin-right: 18px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid black;
+}
+
+.season_label {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.group:checked ~ .season_lable {
+  font-weight: 700;
 }
 
 .favorites-items{

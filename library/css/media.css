@@ -53,6 +53,14 @@ border: 0;
         height: 16px;
         border: none;
       }
+
+      .carousel_button_tabl{
+        background-color: black;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: none;
+        }
 }
 
 
@@ -132,6 +140,10 @@ line-height: 50px; /* 250% */
         position: relative;
       }
 
+      .about{
+        padding-bottom: 38px;
+      }
+
       .about_images{
         flex-wrap: wrap;
         display: inline-flex;
@@ -167,6 +179,41 @@ line-height: 50px; /* 250% */
         align-items: center;
         gap: 58px;
       }
+      .carousel {
+        display: flex;
+        justify-content: center;
+        padding-top: 38px;
+        column-gap: 10px;
+      }
+      /* .carousel_pagination{
+        display: flex;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+      } */
+   
+      .carousel_button {
+        background-color: black;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: none;
+      }
+      .carousel_active {
+        background: #bb945f;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: none;
+      }
 
+      .carousel_button_tabl{
+        display: block;
+        background-color: black;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: none;
+        }
 
 }
