@@ -649,7 +649,7 @@ text-transform: capitalize;
 margin-left:auto;
 }
 
-text_info_h{
+.text_info_h{
   color: #000;
 text-align: center;
 font-family: Inter;
@@ -662,25 +662,75 @@ text-transform: capitalize;
 }
 
 .phone_info{
-width: 503px;
+width: 726px;
 height: 160px;
 padding-bottom: 60px;
 padding-top: 20px;
 }
 
+.phone_link{
+  color:black;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.phone_info_item{
+  color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 200% */
+letter-spacing: 2px;
+text-transform: capitalize;
+}
+
+.staff{
+  color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 40px; /* 200% */
+letter-spacing: 2px;
+text-transform: capitalize;
+}
+
+.mailto{
+  color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 40px;
+letter-spacing: 2px;
+text-transform: capitalize;
+text-decoration: none;
+}
+
+.director_email{
+  color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 200% */
+letter-spacing: 2px;
+text-transform: capitalize;
+}
 
 .map{
   margin-top: 30px;
+  margin-bottom: 10px;
   width: 696px;
   height: 414px;
-background: url(../assets/img/map.png), lightgray 50% / cover no-repeat;
+  background: url(../assets/img/map.png), lightgray 50% / cover no-repeat;
 }
 
 .library_card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1440px;
 height: 614px;
 margin-top: 59px;
 align-content:  space-between;
