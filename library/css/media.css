@@ -83,6 +83,7 @@ padding: 10px 0px;
 justify-content: center;
 align-items: center;
 flex-shrink: 0;
+position: static;
           }
 
           .auth_button{
@@ -98,6 +99,10 @@ font-weight: 700;
 line-height: normal;
 letter-spacing: 1px;
           }
+          
+          .top_of_footer{
+          gap: 350px;
+        }
 
 }
 
@@ -364,6 +369,20 @@ height: 223px;
 flex-shrink: 0;
     }
 
+    .get_card_recomendation {
+        width: 600px;
+        text-align: center;
+    }
 
+    .work_times{
+        margin: 0;
+        justify-self: end;
+        text-align: end;
+    }
+
+    .auth_buttons{
+        position: static;
+      right: 0px;
+      }
 
 }

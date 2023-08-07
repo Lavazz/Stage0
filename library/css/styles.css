@@ -966,3 +966,25 @@ font-weight: 400;
 line-height: 40px; /* 200% */
 text-decoration: none;
 }
+
+.get_card_recomendation{
+  padding-right: 20px;
+  width: 456px;
+  color: #000;
+text-align: right;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 200% */
+letter-spacing: 0.4px;
+}
+
+.auth_buttons{
+  position: absolute;
+right: 55px;
+}
+
+a{
+text-decoration: none;
+}
