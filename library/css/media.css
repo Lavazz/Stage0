@@ -61,6 +61,16 @@ border: 0;
         height: 16px;
         border: none;
         }
+
+        .contacts{
+            height: 1055px;
+          }
+
+          .library_card {
+            margin-top: 0px;
+            height: 857px;
+          }
+
 }
 
 
@@ -226,8 +236,8 @@ line-height: 50px; /* 250% */
 
         .coffee_shop{
             display: flex;
-            max-width: 1440px;
-            height: 841px;
+            max-width:768px;
+            height: 1481px;;
             padding: 0px 20px 0px 20px;
             flex-direction: column;
             align-items: center;
@@ -244,5 +254,72 @@ letter-spacing: 2px;
 text-transform: lowercase;
             }
 
+            .coffee_shop_text_upper{
+                color: #000;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                            }
+                            
+.coffee_menu{
+    margin-top: -55px;
+    margin-left: -60px;
+    height: 520px;
+    width: 438px;
+}
+
+.dessert_menu{
+    height: 520px;
+    width: 438px;
+}
+.menu_items{
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    row-gap: 40px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        max-width: 768px;
+        padding: 0px 20px 0px 60px;
+        gap:0px;
+        height: 1120px;
+    } 
+
+
+    .contacts_info{
+        display: flex;
+        width: 727px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 100px;
+    }
+
+    .text_info {
+        margin-left: 0px;
+        margin-top: 30px;
+        align-self: flex-start;
+    }
+
+    .map{
+        margin-top: 0;
+    }
+
+    .library_action{
+        display: flex;
+        flex-direction: column;
+    }
+    
 
 }
