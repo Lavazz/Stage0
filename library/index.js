@@ -46,3 +46,5 @@ document.querySelectorAll(".close").forEach(el => {
 //   }
 // }
 
+//add registration
+
