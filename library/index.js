@@ -1,9 +1,7 @@
 
-function vueAuthorizationDropDown(event){
-    document.querySelector('.authorization').style.display = "block";
-}
 
-document.querySelector('.profile-button').onclick=vueAuthorizationDropDown;
+//test
+// document.querySelector('.authorization').addEventListener('click', (event)=>{console.log(event);} )
 
 // Получить модальный
 let modalRegister = document.querySelector('.register_modal');
@@ -18,6 +16,7 @@ let register = document.querySelector('.profile_register');
 
 // Когда пользователь нажимает на кнопку, откройте модальный
 login.onclick = function() {
+    console.log(event.target);
     modalLogin.style.display = "block";
   document.querySelector('.authorization').style.display = "none";
 
@@ -41,10 +40,25 @@ document.querySelectorAll(".close").forEach(el => {
 
 // Когда пользователь щелкает в любом месте за пределами модального, закройте его
 // window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
+//     console.log(event.target.classList.value);
+//     if(document.querySelector('.authorization').style.display === "block"){
+//           if (event.target.classList.value != 'drop_list_authorization') {
+//     document.querySelector('.authorization').style.display = "none";
 //   }
+//     }
+
 // }
+
+const el = document.querySelector('.authorization');
+document.onclick = function (e) {
+    console.log(e.target.classList.value);
+    if(e.target.classList.value=="icon_profile"){
+        document.querySelector('.authorization').style.display = "block";
+    }
+    else if (e.target != el) {
+        el.style.display = "none";
+    };
+};
 
 //add registration
 

@@ -103,8 +103,13 @@ height: 50px;
   .icon_profile{
     width: 28px;
     height: 28px;
-    padding: 31px 20px 31px 20px;
+    margin: 31px 20px 31px 20px;
     margin-left:auto;
+    background: url('../assets/img/icon.svg');
+border: none;
+font: inherit;
+color: inherit;
+background-color: transparent;
   }
 
   .welcom{
@@ -282,7 +287,7 @@ width: 17px;
 height: 17px;
 stroke-width: 2px;
 stroke: #000;
-background: url('../assets/img/radiobutton.svg') 0 0 no-repeat;;
+background: url('../assets/img/radiobutton.svg') 0 0 no-repeat;
 }
 
 /* Checked */
@@ -1023,13 +1028,13 @@ line-height: 20px; /* 133.333% */
   padding-right: 0;
 }
 
-.profile-button{
+/* .profile-button{
 padding: 0;
 border: none;
 font: inherit;
 color: inherit;
 background-color: transparent;
-}
+} */
 
 .dropdown{
   position: relative;
