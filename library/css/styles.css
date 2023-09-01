@@ -101,15 +101,33 @@ height: 50px;
   }
 
   .icon_profile{
-    width: 28px;
-    height: 28px;
     margin: 31px 20px 31px 20px;
     margin-left:auto;
-    background: url('../assets/img/icon.svg');
 border: none;
 font: inherit;
 color: inherit;
 background-color: transparent;
+  }
+
+  .icon_no_auth{
+    width: 28px;
+    height: 28px;
+    background: url('../assets/img/icon.svg');
+  }
+
+  .icon_auth{
+    width: 28px;
+    height: 28px;
+    background-color: #FFF;
+    color: black;
+    border-radius: 50%;
+    font-weight: 500; 
+    padding: 1px;
+  }
+
+  .icon_auth_fool_name{
+    background-color: #FFF;
+    color: black;
   }
 
   .welcom{
@@ -1088,14 +1106,12 @@ padding: 5px 18px 4px 18px;
 /* Модальный (фон) */
 .register_modal {
   display: none;
-/* background: white; */
-position:fixed;
-align-items:center;
-justify-content:center;
-left:40%;
-top:30%;
-  background: rgba(0,0,0,0.2); /* цвет фона */
-  z-index: 1050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 10, 10, 0.6);
 }
 
 .register_modal:target {
@@ -1114,10 +1130,12 @@ top:30%;
 .modal-content_login {
   width: 250px;
   height: 262px;
-  position: relative;
+  position:fixed;
+align-items:center;
+justify-content:center;
+left:40%;
+top:30%;
   background-color: #FFF;
-  margin: auto;
-  padding: 0;
   border: 1px solid #888;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
@@ -1127,7 +1145,11 @@ top:30%;
 .modal-content_register {
   width: 250px;
   height: 382px;
-  position: relative;
+  position:fixed;
+align-items:center;
+justify-content:center;
+left:40%;
+top:30%;
   background-color:#FFF;
   margin: auto;
   padding: 0;
@@ -1170,6 +1192,11 @@ line-height: 20px; /* 100% */
 letter-spacing: 0.4px;
 text-transform: uppercase;
 margin: 21px 40px;
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
 }
 
 .login-form{
@@ -1247,12 +1274,11 @@ margin-left: 25px;
 
 .login_modal{
   display: none;
-  /* background: white; */
-  position:fixed;
-  align-items:center;
-  justify-content:center;
-  left:40%;
-  top:30%;
-    background: rgba(0,0,0,0.2); /* цвет фона */
-    z-index: 1050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(14, 10, 10, 0.6); /* цвет фона */
+    /* z-index: 1050; */
 }
