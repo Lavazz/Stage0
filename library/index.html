@@ -66,16 +66,46 @@
                <h2 class="title">About</h2>
                <div class="line"></div>
                <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a<br> cozy coffee shop inside</p>
-               <div class="about_images">
-                  <div class="img_carret">
+               <div class="about_images_container">
+                  <div class="my_slides">
+                  <div class="my_slide">
+                     <img src="assets/img/about/about_image_1.png" style="width: 100%;" alt="about_1">
+                  </div>
+                  <div class="my_slide">
+                     <img src="assets/img/about/about_image_2.png" style="width: 100%;" alt="about_2">
+                  </div>
+                  <div class="my_slide">
+                     <img src="assets/img/about/about_image_3.png" style="width: 100%;" alt="about_3">
+                  </div>
+                  <div class="my_slide">
+                     <img src="assets/img/about/about_image_4.png" style="width: 100%;" alt="about_4">
+                  </div>
+                  <div class="my_slide">
+                     <img src="assets/img/about/about_image_5.png" style="width: 100%;" alt="about_5">
+                  </div>
+               </div>
+                  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095</a> -->
+<!-- 
+                  <button class="itc-slider-btn itc-slider-btn-prev"></button>
+                  <button class="itc-slider-btn itc-slider-btn-next"></button> -->
+                  
+                  <!-- <div class="img_carret">
                      <div class="carret_left"></div>
                      <div class="about-img1"></div>
                      <div class="carret_right"></div>
                      <div class="about-img2"></div>
                      <div class="about-img3"></div>
-                  </div>
+                  </div> -->
                </div>
-               <div class="carousel">
+
+               <div style="text-align:center">
+                  <span class="dot active" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+               <!-- <div class="carousel">
                   <div class="carousel_container">
                      <button
                         type="button"
@@ -94,7 +124,7 @@
                   <div class="button-container">
                      <button type="button" class="carousel_button_tabl"></button>
                   </div>
-               </div>
+               </div> -->
             </section>
             <section class="favorites" id="favorites">
                <h2 class="title">Favorites</h2>
@@ -383,9 +413,9 @@
            <h4 class="login_title">Login</h4>
            <form class="login-form">
            <label for="email_login" class="register_lable">E-mail or readers card</label>
-            <input type="email" id="email_login" class="register_input">
+            <input type="email" id="email_login" name="email_login" class="register_input" required>
            <label for="password_login" class="register_lable">Password</label>
-            <input type="password" id="password_login" class="register_input">
+            <input type="password" id="password_login"  name="password_login"  class="register_input" minlength="8" required>
            <input type="submit" value="Log In" class="register_button">
          </form>
          <div>
