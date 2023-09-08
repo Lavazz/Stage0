@@ -37,8 +37,12 @@ const el = document.querySelector('.authorization');
 document.onclick = function (e) {
     console.log(e.target.classList[0]);
     if(e.target.classList.contains("icon_profile")){
+        if(!isLoging){
         document.querySelector('.authorization').style.display = "block";
         document.querySelector(".icon_profile").classList.add("icon_no_auth");
+    }else if(isLoging){
+        document.querySelector('.authorization_logout').style.display = "block";
+    }
     }else if (e.target != el && document.querySelector('.authorization').style.display == "block") {
         el.style.display = "none"; 
     } else if(e.target.classList[0] =='login'){
@@ -174,11 +178,36 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
+  if(window.screen.width>1024){
   slides[slideIndex-1].style.display = "block";
   slides[slideIndex].style.display = "block";
   slides[slideIndex+1].style.display = "block";
   dots[slideIndex-1].className += " active";
+  }else{
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].className += " active";
+  }
 }
+
+//buy
+
+document.querySelector('.button_buy').addEventListener("click", handleBuy);
+document.querySelector('.auth_button_login').addEventListener("click", handleBuy);
+document.querySelector('.auth_button_signup').addEventListener("click", handleReg);
+
+function handleBuy(event){
+if(!isLoging){
+    modalLogin.style.display = "block";
+}
+}
+function handleReg(event){
+if(!isLoging){
+    modalRegister.style.display = "block";
+}
+}
+
+
+
 
 
 

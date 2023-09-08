@@ -1108,17 +1108,12 @@ padding: 5px 18px 4px 18px;
   background-color: rgba(15, 10, 10, 0.6);
 }
 
+
 .register_modal:target {
   opacity: 1; /* делаем окно видимым */
   pointer-events: auto; /* элемент видим для событий мыши */
   overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
-/* ширина модального окна и его отступы от экрана */
-/* .modal-dialog {.
-  position: relative;
-  width: auto;
-  margin: 10px;
-} */
 
 /* Модальное содержание/коробка */
 .modal-content_login {
@@ -1134,6 +1129,16 @@ top:30%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s
+}
+
+.buy_modal{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 10, 10, 0.6);
 }
 
 .modal-content_register {
@@ -1152,6 +1157,41 @@ top:30%;
   animation-name: animatetop;
   animation-duration: 0.4s
 }
+
+.modal-content_buy{
+  width: 640px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+	align-items: flex-start;
+  position:fixed;
+align-items:center;
+left:27%;
+top:15%;
+  background-color:#FFF;
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.close_buy{
+color: white;
+text-shadow: 0 1px 0 #fff;
+float: right;
+font-family: sans-serif;
+font-size: 38px;
+font-weight: 300;
+line-height: 1;
+text-decoration: none;
+opacity: .5;
+margin-top: 14px;
+margin-right: 20px;
+}
+
 
 /* свойства для кнопки "Закрыть" */
 .close {
@@ -1278,13 +1318,6 @@ margin-left: 25px;
 }
 
 .about_images_container {
-  /* max-width: 1440px;
-  flex-wrap: wrap;
-  display: inline-flex;
-  gap: 25px;
-  position: relative;
-  margin: auto;
-  overflow: hidden; */
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -1309,7 +1342,19 @@ gap: 25px;
   flex-shrink: 0;
 }
 
-
+.dot_addaptive{
+  display: none;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  border: none;
+  margin-top:40px;
+  margin-right: 7px;
+}
 
 
 
@@ -1327,7 +1372,7 @@ gap: 25px;
   margin-right: 7px;
 }
 
-.active, .dot:hover {
+.active, .dot:hover .dot_addaptive:hover {
   background-color: #bb945f;
   transition-duration: .2s;
 }
@@ -1339,11 +1384,12 @@ gap: 25px;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  display: none;
 }
 
 /* Position the "next button" to the right */
@@ -1357,17 +1403,122 @@ gap: 25px;
   background-color: rgba(0,0,0,0.8);
 }
 
-/* .carousel_button {
-  background-color: black;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  border: none;
+.buy_title{
+  color: #FFF;
+text-align: center;
+font-family: Forum;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 50% */
+letter-spacing: 0.8px;
+text-transform: uppercase;
+margin-top: 20px;
+margin-left: 33px;
 }
-.carousel_active {
-  background: #bb945f;
-  border-radius: 50%;
-  width: 16px;
+
+.buy_header{
+  background-color: #0C0C0E;;
+  width: 640px;
+height: 60px;
+flex-shrink: 0;
+margin-top: 0;
+}
+
+.form_and_description{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 30px 35px 40px 35px;
+}
+
+.modal_buy_form{
+  display: flex;
+  flex-wrap: wrap;
+  flex: shrink 0.35;
+}
+
+.buy_form{
+  width: 200px;
+height: 410px;
+flex-shrink: 0;
+}
+
+.buy_input{
+  width: 193px;
   height: 16px;
-  border: none;
-} */
+  flex-shrink: 0;
+  margin: 10px 0;
+  border: 1px solid #BB945F;
+}
+
+.cvc_input{
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin : 10px 0; 
+  width: 38px;
+  height: 17px;
+  margin-right: 7px;
+}
+
+.buy_lable{
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 133.333% */
+letter-spacing: 0.3px;
+margin-top: 2px;
+margin-left: -1px;
+}
+
+.buy_description{
+  margin-top: -16px;
+  margin-left: -1px;
+}
+
+.buy_description_text{
+color: #8E8E8E;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 133.333% */
+letter-spacing: 2px;
+}
+
+.align_buy{
+  margin-top: 9px;
+}
+
+.buy_button{
+  width: 75px;
+height: 30px;
+flex-shrink: 0;
+border-radius: 2px;
+border: 1px solid #0C0C0E;
+color: #0C0C0E;
+text-align: center;
+font-family: Inter;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+margin-top: 11px;
+}
+
+.buy_price{
+  color: #0C0C0E;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 100% */
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-top: -20px;
+margin-left: 99px;
+}
