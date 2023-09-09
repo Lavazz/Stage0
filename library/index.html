@@ -24,6 +24,7 @@
                </nav>
                <div class="dropdown">
                <button class="icon_profile icon_no_auth">
+                  <!-- <span class="icon_auth"></span> -->
                </button>              
                <div class="authorization">
                   <div class="drop_list_authorization">
@@ -41,7 +42,7 @@
                   <div class="short_line"></div>  
                   <button class="profile_no_authorized" id="my_profile"><span class="profile_no_authorized_text">My profile</span>
                   </button>   
-                  <button class="profile_no_authorized" id="logout"><span class="profile_no_authorized_text">Log Out</span>                     
+                  <button class="profile_no_authorized profile_logout" id="logout"><span class="logout profile_no_authorized_text">Log Out</span>                     
                   </button>
                </div>
                </div>
@@ -184,7 +185,7 @@
                         <p class="book_title"><span class="title-capitalize">The Last Queen</span><br> By Clive Irving</p>
                         <p class="book_description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
                         <div class="book_4"></div>
-                        <button class="button_buy button_buy_active" disabled>Buy</button>
+                        <button class="button_buy" disabled>Buy</button>
                      </div>
                   </li>
                </ul>
@@ -418,7 +419,7 @@
             <input type="email" id="email_login" name="email_login" class="register_input" required>
            <label for="password_login" class="register_lable">Password</label>
             <input type="password" id="password_login"  name="password_login"  class="register_input" minlength="8" required>
-           <input type="submit" value="Log In" class="login_button">
+           <input type="submit" value="Log In" class="register_button">
          </form>
          <div>
             <div class="register_redirect">

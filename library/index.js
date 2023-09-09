@@ -1,13 +1,15 @@
 let isLoging=false;
-let currentUser;
+let currentUser={};
 
 // Получить модальный
 let modalRegister = document.querySelector('.register_modal');
 let modalLogin = document.querySelector('.login_modal');
+let modalBuy = document.querySelector('.buy_modal');
 
 // Получить кнопку, которая открывает модальный
 let login = document.querySelector('.profile_login');
 let register = document.querySelector('.profile_register');
+let logout= document.querySelector('.profile_logout');
 
 
 // Когда пользователь нажимает на кнопку, откройте модальный
@@ -22,6 +24,15 @@ register.onclick = function() {
   document.querySelector('.authorization').style.display = "none";
 }
 
+logout.onclick = function() {
+   currentUser={};
+   isLoging=false;
+   document.querySelector('.authorization_logout').style.display = "none";
+   document.querySelector(".icon_profile").classList.add("icon_no_auth");
+   document.querySelector(".icon_profile").removeChild( document.querySelector(".icon_auth"));
+
+}
+
 
 document.querySelectorAll(".close").forEach(el => {
     el.addEventListener("click", ()=>{
@@ -32,11 +43,17 @@ document.querySelectorAll(".close").forEach(el => {
         }
     })})
 
+    document.querySelectorAll(".close_buy").forEach(el => {
+        el.addEventListener("click", ()=>{
+           modalBuy.style.display = "none";
+            
+        })})
+
 
 const el = document.querySelector('.authorization');
 document.onclick = function (e) {
     console.log(e.target.classList[0]);
-    if(e.target.classList.contains("icon_profile")){
+    if(e.target.classList.contains("icon_profile") || e.target.classList.contains("icon_auth")){
         if(!isLoging){
         document.querySelector('.authorization').style.display = "block";
         document.querySelector(".icon_profile").classList.add("icon_no_auth");
@@ -93,10 +110,7 @@ document.onclick = function (e) {
 	
     isLoging=true;
 
-    currentUser={
-        firstName: firstName, 
-        lastName: lastName, 
-    }
+    currentUser=newUser;
 
     const iconLetters=(firstName.substring(0, 1)+lastName.substring(0, 1)).toUpperCase();
     console.log(iconLetters);
@@ -107,16 +121,18 @@ document.onclick = function (e) {
 }
 
 
-document.querySelector(".icon_profile").addEventListener('mouseover', function(event) {
-    if(isLoging){
-    document.querySelector(".icon_profile").innerHTML=`<span class="icon_auth_fool_name">${currentUser[0].firstName} ${currentUser[0].lastName}</span>`;
-}});
+// document.querySelector(".icon_profile").addEventListener('mouseover', function(event) {
+//     if(isLoging){
+         
+//     document.querySelector(".icon_profile").innerHTML=`<button class="icon_profile icon_no_auth" title=${currentUser.firstName} ${currentUser.lastName}>
+//     </button>`;
+// }});
 
-document.querySelector(".icon_profile").addEventListener('mouseout', function (event) {
-    if(isLoging){	
-    const iconLetters=(currentUser[0].firstName.substring(0, 1)+currentUser[0].lastName.substring(0, 1)).toUpperCase();
-    document.querySelector(".icon_profile").innerHTML=`<span class="icon_auth">${iconLetters}</span>`;
-}});
+// document.querySelector(".icon_profile").addEventListener('mouseout', function (event) {
+//     if(isLoging){	
+//     const iconLetters=(currentUser.firstName.substring(0, 1)+currentUser.lastName.substring(0, 1)).toUpperCase();
+//     document.querySelector(".icon_profile").innerHTML=`<span class="icon_auth">${iconLetters}</span>`;
+// }});
 
 
 //login
@@ -132,16 +148,23 @@ function handleSubmitLogin(event){
     console.log(`emailFromUser: ${email}`);
 
     let usersFromStorage= JSON.parse(window.localStorage.getItem("users"));
-
+    console.log(`usersFromStorage: ${usersFromStorage}`);
+    console.log(usersFromStorage);
     if(usersFromStorage){
        
-    // let logingUser = usersFromStorage.filter((u) => u.email===email && u.password===password.toString);
-    currentUser = usersFromStorage.filter(u=>u.email===email && u.password===password.toString());
+    // currentUser = usersFromStorage.filter(u=>u.email===email && u.password===password.toString())[0];
+    currentUser = usersFromStorage.filter(u=>{
+        console.log(`u.email: ${u.email} ===${email}` );
+        console.log(`u.email: ${u.password} ===${password}` );
+        console.log(u.email===email && u.password===password.toString());
+
+     return  u.email===email && u.password===password.toString()})[0];
+   
           if(currentUser){ 
-              console.log(`currentUser: ${currentUser[0]}`);
+              console.log(`currentUser: ${currentUser}`);
               isLoging=true;
          
-          const iconLetters=(currentUser[0].firstName.substring(0, 1)+currentUser[0].lastName.substring(0, 1)).toUpperCase();
+          const iconLetters=(currentUser.firstName.substring(0, 1)+currentUser.lastName.substring(0, 1)).toUpperCase();
           console.log(iconLetters);
           document.querySelector(".icon_profile").innerHTML=`<span class="icon_auth">${iconLetters}</span>`;
           document.querySelector(".icon_profile").classList.toggle("icon_no_auth");
@@ -191,13 +214,15 @@ function showSlides(n) {
 
 //buy
 
-document.querySelector('.button_buy').addEventListener("click", handleBuy);
+document.querySelectorAll('.button_buy').forEach(s=>s.addEventListener("click", handleBuy));
 document.querySelector('.auth_button_login').addEventListener("click", handleBuy);
 document.querySelector('.auth_button_signup').addEventListener("click", handleReg);
 
 function handleBuy(event){
 if(!isLoging){
     modalLogin.style.display = "block";
+}else{
+    modalBuy.style.display = "block";
 }
 }
 function handleReg(event){
