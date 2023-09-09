@@ -85,7 +85,8 @@ document.onclick = function (e) {
 	const lastName = data.get("last_name");	
 	const email = data.get("email_register");
     const password = data.get("password_register");
-    const cardNumber= Math.floor(Math.random() *  Math.pow(10, 9));
+    const cardNumberDes= Math.floor(Math.random() *  Math.pow(10, 9));
+    const cardNumber = Number(cardNumberDes).toString(16); 
 
     let newUser={
         firstName: firstName, 
