@@ -389,4 +389,12 @@ flex-shrink: 0;
         
       }
 
+      .prev, .next {
+        display: block;
+      }
+
+      .dot_addaptive{
+        display: inline-block;
+      }
+
 }

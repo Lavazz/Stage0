@@ -101,10 +101,33 @@ height: 50px;
   }
 
   .icon_profile{
+    margin: 31px 20px 31px 20px;
+    margin-left:auto;
+border: none;
+font: inherit;
+color: inherit;
+background-color: transparent;
+  }
+
+  .icon_no_auth{
     width: 28px;
     height: 28px;
-    padding: 31px 20px 31px 20px;
-    margin-left:auto;
+    background: url('../assets/img/icon.svg');
+  }
+
+  .icon_auth{
+    width: 28px;
+    height: 28px;
+    background-color: #FFF;
+    color: black;
+    border-radius: 50%;
+    font-weight: 500; 
+    padding: 1px;
+  }
+
+  .icon_auth_fool_name{
+    background-color: #FFF;
+    color: black;
   }
 
   .welcom{
@@ -187,7 +210,8 @@ text-transform: uppercase;
   gap: 25px;
 }
 
-.about-img1{
+
+/* .about-img1{
   background: url(../assets/img/about/about_image_1.png), lightgray 50% / cover no-repeat;
   width: 450px;
   height: 560px;
@@ -206,13 +230,6 @@ text-transform: uppercase;
   width: 450px;
   height: 560px;
   flex-shrink: 0;
-}
-
-/* .carousel_pagination{
-width: 68px;
-height: 16px;
-flex-shrink: 0;
-margin: 40px 0px;
 } */
 
 .carousel {
@@ -282,7 +299,7 @@ width: 17px;
 height: 17px;
 stroke-width: 2px;
 stroke: #000;
-background: url('../assets/img/radiobutton.svg') 0 0 no-repeat;;
+background: url('../assets/img/radiobutton.svg') 0 0 no-repeat;
 }
 
 /* Checked */
@@ -1023,13 +1040,13 @@ line-height: 20px; /* 133.333% */
   padding-right: 0;
 }
 
-.profile-button{
+/* .profile-button{
 padding: 0;
 border: none;
 font: inherit;
 color: inherit;
 background-color: transparent;
-}
+} */
 
 .dropdown{
   position: relative;
@@ -1050,6 +1067,16 @@ font-family: Inter;
 font-size: 15px;
 font-style: normal;
 font-weight: 700;
+line-height: 20px; /* 133.333% */
+padding: 5px 18px 4px 18px;
+}
+
+.profile_initial{
+  color: #000;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
 line-height: 20px; /* 133.333% */
 padding: 5px 18px 4px 18px;
 }
@@ -1083,46 +1110,55 @@ padding: 5px 18px 4px 18px;
 /* Модальный (фон) */
 .register_modal {
   display: none;
-/* background: white; */
-position:fixed;
-align-items:center;
-justify-content:center;
-left:40%;
-top:30%;
-  background: rgba(0,0,0,0.2); /* цвет фона */
-  z-index: 1050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 10, 10, 0.6);
 }
+
 
 .register_modal:target {
   opacity: 1; /* делаем окно видимым */
   pointer-events: auto; /* элемент видим для событий мыши */
   overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
-/* ширина модального окна и его отступы от экрана */
-/* .modal-dialog {.
-  position: relative;
-  width: auto;
-  margin: 10px;
-} */
 
 /* Модальное содержание/коробка */
 .modal-content_login {
   width: 250px;
   height: 262px;
-  position: relative;
+  position:fixed;
+align-items:center;
+justify-content:center;
+left:40%;
+top:30%;
   background-color: #FFF;
-  margin: auto;
-  padding: 0;
   border: 1px solid #888;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s
 }
 
+.buy_modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 10, 10, 0.6);
+}
+
 .modal-content_register {
   width: 250px;
   height: 382px;
-  position: relative;
+  position:fixed;
+align-items:center;
+justify-content:center;
+left:40%;
+top:30%;
   background-color:#FFF;
   margin: auto;
   padding: 0;
@@ -1131,6 +1167,41 @@ top:30%;
   animation-name: animatetop;
   animation-duration: 0.4s
 }
+
+.modal-content_buy{
+  width: 640px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+	align-items: flex-start;
+  position:fixed;
+align-items:center;
+left:27%;
+top:15%;
+  background-color:#FFF;
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.close_buy{
+color: white;
+text-shadow: 0 1px 0 #fff;
+float: right;
+font-family: sans-serif;
+font-size: 38px;
+font-weight: 300;
+line-height: 1;
+text-decoration: none;
+opacity: .5;
+margin-top: 14px;
+margin-right: 20px;
+}
+
 
 /* свойства для кнопки "Закрыть" */
 .close {
@@ -1165,6 +1236,11 @@ line-height: 20px; /* 100% */
 letter-spacing: 0.4px;
 text-transform: uppercase;
 margin: 21px 40px;
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
 }
 
 .login-form{
@@ -1242,12 +1318,457 @@ margin-left: 25px;
 
 .login_modal{
   display: none;
-  /* background: white; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(14, 10, 10, 0.6); /* цвет фона */
+    /* z-index: 1050; */
+}
+
+.about_images_container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.my_slides{
+gap: 25px;
+  display: flex;
+  width: 200%;
+  transition: transform 0.3s;
+}
+
+.my_slide{
+  text-align: center;
+}
+
+.my_slide img{
+  max-height:560px;
+  object-fit: cover;
+  width: 450px;
+  flex-shrink: 0;
+}
+
+.dot_addaptive{
+  display: none;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  border: none;
+  margin-top:40px;
+  margin-right: 7px;
+}
+
+
+
+.dot {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  border: none;
+  margin-top:40px;
+  margin-right: 7px;
+}
+
+.active, .dot:hover .dot_addaptive:hover {
+  background-color: #bb945f;
+  transition-duration: .2s;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  display: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.buy_title{
+  color: #FFF;
+text-align: center;
+font-family: Forum;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 50% */
+letter-spacing: 0.8px;
+text-transform: uppercase;
+margin-top: 20px;
+margin-left: 33px;
+}
+
+.buy_header{
+  background-color: #0C0C0E;;
+  width: 640px;
+height: 60px;
+flex-shrink: 0;
+margin-top: 0;
+}
+
+.form_and_description{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 30px 35px 40px 35px;
+}
+
+.modal_buy_form{
+  display: flex;
+  flex-wrap: wrap;
+  flex: shrink 0.35;
+}
+
+.buy_form{
+  width: 200px;
+height: 410px;
+flex-shrink: 0;
+}
+
+.buy_input{
+  width: 193px;
+  height: 16px;
+  flex-shrink: 0;
+  margin: 10px 0;
+  border: 1px solid #BB945F;
+}
+
+.cvc_input{
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin : 10px 0; 
+  width: 38px;
+  height: 17px;
+  margin-right: 7px;
+}
+
+.buy_lable{
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 133.333% */
+letter-spacing: 0.3px;
+margin-top: 2px;
+margin-left: -1px;
+}
+
+.buy_description{
+  margin-top: -16px;
+  margin-left: -1px;
+}
+
+.buy_description_text{
+color: #8E8E8E;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 133.333% */
+letter-spacing: 2px;
+}
+
+.align_buy{
+  margin-top: 9px;
+}
+
+.buy_button{
+  width: 75px;
+height: 30px;
+flex-shrink: 0;
+border-radius: 2px;
+border: 1px solid #0C0C0E;
+color: #0C0C0E;
+text-align: center;
+font-family: Inter;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+margin-top: 11px;
+}
+
+.buy_price{
+  color: #0C0C0E;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 100% */
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-top: -20px;
+margin-left: 99px;
+}
+
+.profile_modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(14, 10, 10, 0.6);
+}
+
+.profile_modal_content{
+  width: 600px;
+  height: 400px;
+  background-color:#FFF;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  align-content: flex-start;
+	align-items: flex-start;
   position:fixed;
-  align-items:center;
-  justify-content:center;
-  left:40%;
-  top:30%;
-    background: rgba(0,0,0,0.2); /* цвет фона */
-    z-index: 1050;
+align-items:start;
+left:27%;
+top:15%;
+
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.bg{
+width: 170px;
+height: 403px;
+flex-shrink: 0;
+background-color: #0C0C0E;
+}
+
+.name_bg{
+  width: 120px;
+height: 30px;
+flex-shrink: 0;
+  background-color: white;
+  position: relative;
+  left: 25px;
+  top: 112px;
+  text-align: center;
+}
+
+.name_bg_p{
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  padding-top: 8px;
+}
+
+.profile_header{
+  display: flex;
+  flex-direction: row;
+gap:145px;
+}
+
+.profile_info{
+  width: 430px;
+}
+
+.profile_info h4{
+  color: black;
+  
+}
+
+.avatar{
+  width: 80px;
+height: 80px;
+flex-shrink: 0;
+background: #FFF;
+position: relative;
+top: 119px;
+left: 45px;
+}
+
+.avatar p{
+  color: #BB945F;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 100% */
+text-transform: capitalize;
+position: relative;
+top:28px;
+}
+
+.profile_close{
+  float: right;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  text-decoration: none;
+margin-top: 11px;
+margin-left: 15px;
+}
+
+.profile_title{
+  color: #000;
+text-align: center;
+font-family: Forum;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 50% */
+letter-spacing: 0.8px;
+text-transform: uppercase;
+margin-left: 20px;
+margin-top: 38px;
+}
+
+.cards_profile{
+  display: flex;
+  flex-direction: row;
+  margin-top: -32px;
+}
+
+.visits_info{
+  display: flex;
+  flex-direction: row;
+  display: inline-flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+margin-left: 20px;
+}
+
+.visit_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.visit_item p{
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 100% */
+letter-spacing: 0.4px;
+text-transform: capitalize;
+}
+
+.visit_item span{
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 200% */
+letter-spacing: 0.2px;
+text-transform: capitalize;
+}
+
+.visit_img{
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.rented_books{
+  color: #0C0C0E;
+/* text-align: center; */
+margin-top: 33px;
+margin-left: -19px;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 80% */
+margin-top: 25px;
+}
+
+.rented_books_item{
+  color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 100% */
+letter-spacing: 2px;
+text-transform: capitalize;	
+list-style: disc;
+margin-bottom: -13px;
+margin-left: 30px;
+}
+
+.align_item{
+margin-top: -18px ;
+}
+
+.profile_card_number{
+  color: #0C0C0E;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 100% */
+position: relative;
+bottom: -46px;
+left: -64px;
+}
+
+.profile_card_number span{
+color: #BB945F;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 100% */
+position: relative;
+left: 11px;
+}
+
+.copy_img{
+  position: relative;
+  left: 20px;
 }
