@@ -138,18 +138,10 @@ document.onclick = function (e) {
 }
 
 
-// document.querySelector(".icon_profile").addEventListener('mouseover', function(event) {
-//     if(isLoging){
-         
-//     document.querySelector(".icon_profile").innerHTML=`<button class="icon_profile icon_no_auth" title=${currentUser.firstName} ${currentUser.lastName}>
-//     </button>`;
-// }});
-
-// document.querySelector(".icon_profile").addEventListener('mouseout', function (event) {
-//     if(isLoging){	
-//     const iconLetters=(currentUser.firstName.substring(0, 1)+currentUser.lastName.substring(0, 1)).toUpperCase();
-//     document.querySelector(".icon_profile").innerHTML=`<span class="icon_auth">${iconLetters}</span>`;
-// }});
+document.querySelector(".icon_profile").addEventListener('mouseover', function(event) {
+    if(isLoging){         
+    document.querySelector(".icon_profile").title=currentUser.firstName+' ' +currentUser.lastName;
+}});
 
 
 //login
