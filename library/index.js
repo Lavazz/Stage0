@@ -5,11 +5,13 @@ let currentUser={};
 let modalRegister = document.querySelector('.register_modal');
 let modalLogin = document.querySelector('.login_modal');
 let modalBuy = document.querySelector('.buy_modal');
+let modalProfile = document.querySelector('.profile_modal');
 
 // Получить кнопку, которая открывает модальный
 let login = document.querySelector('.profile_login');
 let register = document.querySelector('.profile_register');
 let logout= document.querySelector('.profile_logout');
+let myProfile= document.querySelector('.my_profile');
 
 
 // Когда пользователь нажимает на кнопку, откройте модальный
@@ -30,8 +32,14 @@ logout.onclick = function() {
    document.querySelector('.authorization_logout').style.display = "none";
    document.querySelector(".icon_profile").classList.add("icon_no_auth");
    document.querySelector(".icon_profile").removeChild( document.querySelector(".icon_auth"));
-
 }
+
+myProfile.onclick = function() {
+    modalProfile.style.display = "block";
+    document.querySelector('.prof_num').innerHTML=currentUser.cardNumber;
+    document.querySelector('.authorization_logout').style.display = "none";
+ 
+ }
 
 
 document.querySelectorAll(".close").forEach(el => {
@@ -45,8 +53,12 @@ document.querySelectorAll(".close").forEach(el => {
 
     document.querySelectorAll(".close_buy").forEach(el => {
         el.addEventListener("click", ()=>{
-           modalBuy.style.display = "none";
-            
+           modalBuy.style.display = "none";            
+        })})
+
+    document.querySelectorAll(".profile_close").forEach(el => {
+        el.addEventListener("click", ()=>{
+           modalProfile.style.display = "none";            
         })})
 
 
@@ -59,6 +71,7 @@ document.onclick = function (e) {
         document.querySelector(".icon_profile").classList.add("icon_no_auth");
     }else if(isLoging){
         document.querySelector('.authorization_logout').style.display = "block";
+        document.querySelector('.profile_initial').innerHTML=currentUser.cardNumber;
     }
     }else if (e.target != el && document.querySelector('.authorization').style.display == "block") {
         el.style.display = "none"; 
@@ -70,6 +83,10 @@ document.onclick = function (e) {
         modalLogin.style.display = "none";
     }else if(e.target.classList.value =='register_modal' &&  modalRegister.style.display == "block"){
         modalRegister.style.display = "none";
+    }else if(e.target !=document.querySelector('.profile_no_authorized') &&  document.querySelector('.authorization_logout').style.display == "block"){
+        document.querySelector('.authorization_logout').style.display = "none";
+    }else if(e.target.classList.value =='buy_modal' &&  modalBuy.style.display == "block"){
+        modalBuy.style.display = "none";
     }
 };
 
@@ -84,9 +101,9 @@ document.onclick = function (e) {
 	const firstName = data.get("first_name");
 	const lastName = data.get("last_name");	
 	const email = data.get("email_register");
-    const password = data.get("password_register");
-    const cardNumberDes= Math.floor(Math.random() *  Math.pow(10, 9));
-    const cardNumber = Number(cardNumberDes).toString(16); 
+    const password = data.get("password_register");                         
+    const cardNumberDes= Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
+    const cardNumber = (cardNumberDes.toString(16)).toUpperCase(); 
 
     let newUser={
         firstName: firstName, 
@@ -94,15 +111,14 @@ document.onclick = function (e) {
         email: email, 
         password: password, 
         cardNumber: cardNumber
-    }
+    };
 
+    console.log(newUser);
     let users = [];
-    let usersFromStorage=window.localStorage.getItem("users");
+    let usersFromStorage=JSON.parse(window.localStorage.getItem("users"));
     if(usersFromStorage){
-        console.log(usersFromStorage);
-    let newData = [...usersFromStorage, newUser]
-    window.localStorage.setItem("users", newData);
-     users=usersFromStorage.push(newUser);
+    usersFromStorage.push(newUser);
+    window.localStorage.setItem("users", JSON.stringify(usersFromStorage));
     }else{
         users.push(newUser);
         window.localStorage.setItem("users", JSON.stringify(users));
@@ -217,6 +233,7 @@ function showSlides(n) {
 
 document.querySelectorAll('.button_buy').forEach(s=>s.addEventListener("click", handleBuy));
 document.querySelector('.auth_button_login').addEventListener("click", handleBuy);
+document.querySelector('.auth_button_signup').addEventListener("click", handleReg);
 document.querySelector('.auth_button_signup').addEventListener("click", handleReg);
 
 function handleBuy(event){
