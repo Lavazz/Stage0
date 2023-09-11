@@ -23,28 +23,28 @@
                   </ul>
                </nav>
                <div class="dropdown">
-               <button class="icon_profile icon_no_auth" title=" ">
-               </button>          
-               <div class="authorization">
-                  <div class="drop_list_authorization">
-                  <p class="profile">Profile</p>
-                  <div class="short_line"></div>  
-                  <button class="profile_no_authorized profile_login" id="login"><span class="login profile_no_authorized_text">Log In</span>
-                  </button>   
-                  <button class="profile_no_authorized profile_register" id="register"><span class="register profile_no_authorized_text">Register</span>                     
-                  </button>
+                  <button class="icon_profile icon_no_auth" title=" ">
+                  </button>          
+                  <div class="authorization">
+                     <div class="drop_list_authorization">
+                        <p class="profile">Profile</p>
+                        <div class="short_line"></div>
+                        <button class="profile_no_authorized profile_login" id="login"><span class="login profile_no_authorized_text">Log In</span>
+                        </button>   
+                        <button class="profile_no_authorized profile_register" id="register"><span class="register profile_no_authorized_text">Register</span>                     
+                        </button>
+                     </div>
                   </div>
-               </div>
-               <div class="authorization_logout">
-                  <div class="drop_list_authorization">
-                  <p class="profile_initial">Profile</p>
-                  <div class="short_line"></div>  
-                  <button class="profile_no_authorized my_profile" id="my_profile"><span class="profile_no_authorized_text">My profile</span>
-                  </button>   
-                  <button class="profile_no_authorized profile_logout" id="logout"><span class="logout profile_no_authorized_text">Log Out</span>                     
-                  </button>
-               </div>
-               </div>
+                  <div class="authorization_logout">
+                     <div class="drop_list_authorization">
+                        <p class="profile_initial">Profile</p>
+                        <div class="short_line"></div>
+                        <button class="profile_no_authorized my_profile" id="my_profile"><span class="profile_no_authorized_text">My profile</span>
+                        </button>   
+                        <button class="profile_no_authorized profile_logout" id="logout"><span class="logout profile_no_authorized_text">Log Out</span>                     
+                        </button>
+                     </div>
+                  </div>
                   <button class="nav-button" id="button-burger">
                   <img src="/assets/img/burger.svg" alt="burger-nav">
                   </button>
@@ -68,33 +68,32 @@
                <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a<br> cozy coffee shop inside</p>
                <div class="about_images_container">
                   <div class="my_slides">
-                  <div class="my_slide">
-                     <img src="assets/img/about/about_image_1.png" style="width: 100%;" alt="about_1">
+                     <div class="my_slide">
+                        <img src="assets/img/about/about_image_1.png" style="width: 100%;" alt="about_1">
+                     </div>
+                     <div class="my_slide">
+                        <img src="assets/img/about/about_image_2.png" style="width: 100%;" alt="about_2">
+                     </div>
+                     <div class="my_slide">
+                        <img src="assets/img/about/about_image_3.png" style="width: 100%;" alt="about_3">
+                     </div>
+                     <div class="my_slide">
+                        <img src="assets/img/about/about_image_4.png" style="width: 100%;" alt="about_4">
+                     </div>
+                     <div class="my_slide">
+                        <img src="assets/img/about/about_image_5.png" style="width: 100%;" alt="about_5">
+                     </div>
                   </div>
-                  <div class="my_slide">
-                     <img src="assets/img/about/about_image_2.png" style="width: 100%;" alt="about_2">
-                  </div>
-                  <div class="my_slide">
-                     <img src="assets/img/about/about_image_3.png" style="width: 100%;" alt="about_3">
-                  </div>
-                  <div class="my_slide">
-                     <img src="assets/img/about/about_image_4.png" style="width: 100%;" alt="about_4">
-                  </div>
-                  <div class="my_slide">
-                     <img src="assets/img/about/about_image_5.png" style="width: 100%;" alt="about_5">
-                  </div>
-               </div>
                   <a class="prev" onclick="plusSlides(-1)">&#10094</a>
                   <a class="next" onclick="plusSlides(1)">&#10095</a> 
                </div>
-
                <div style="text-align:center">
                   <span class="dot active" onclick="currentSlide(1)"></span>
                   <span class="dot" onclick="currentSlide(2)"></span>
                   <span class="dot" onclick="currentSlide(3)"></span>
                   <span class="dot_addaptive" onclick="currentSlide(4)"></span>
                   <span class="dot_addaptive" onclick="currentSlide(5)"></span>
-                </div>
+               </div>
             </section>
             <section class="favorites" id="favorites">
                <h2 class="title">Favorites</h2>
@@ -312,8 +311,27 @@
                         <form class="card_bg_form">
                            <div class="input_card_form">
                               <p>Brooklyn Public Library</p>
-                              <input class="input_card" type="text" placeholder="Reader's name"><br><br>
-                              <input class="input_card" type="text" placeholder="Card number"><br><br>
+                              <input id="card_form_name" class="input_card" type="text" placeholder="Reader's name"><br><br>
+                              <input id="card_form_number" class="input_card" type="text" placeholder="Card number"><br><br>
+                           </div>
+                           <div class="cards_profile visibility">
+                              <div class="visits_info">
+                                 <div class="visit_item">
+                                    <p>Visits</p>
+                                    <img src="assets/img/union.svg" alt="union" class="visit_img">
+                                    <span>23</span>
+                                 </div>
+                                 <div class="visit_item">
+                                    <p>Bonuses</p>
+                                    <img src="assets/img/star.svg" alt="union" class="visit_img">
+                                    <span>23</span>
+                                 </div>
+                                 <div class="visit_item">
+                                    <p>Books</p>
+                                    <img src="assets/img/book.svg" alt="union" class="visit_img">
+                                    <span>23</span>
+                                 </div>
+                              </div>
                            </div>
                            <button type="submit" class="card_button"><span class="card_button_text">Check the card</span></button>
                         </form>
@@ -325,6 +343,7 @@
                      <div class="auth_buttons">
                         <button class="auth_button auth_button_signup">Sign Up</button>
                         <button class="auth_button auth_button_login">Log in</button>
+                        <button class="auth_button auth_button_profile">Profile</button>
                      </div>
                   </div>
                </div>
@@ -375,141 +394,132 @@
             </div>
          </footer>
       </div>
-
       <!-- Login -->
       <div id="openModal_login" class="login_modal">
          <div class="modal-content_login">
-           <span class="close">&times;</span>
-           <h4 class="login_title">Login</h4>
-           <form class="login-form">
-           <label for="email_login" class="register_lable">E-mail or readers card</label>
-            <input type="email" id="email_login" name="email_login" class="register_input" required>
-           <label for="password_login" class="register_lable">Password</label>
-            <input type="password" id="password_login"  name="password_login"  class="register_input" minlength="8" required>
-           <input type="submit" value="Log In" class="register_button">
-         </form>
-         <div>
-            <div class="register_redirect">
-         <p class="register_paragraf">Don’t have an account?</p>
-         <a href="openModal_register" class="register_link">Register</a>
+            <span class="close">&times;</span>
+            <h4 class="login_title">Login</h4>
+            <form class="login-form">
+               <label for="email_login" class="register_lable">E-mail or readers card</label>
+               <input type="email" id="email_login" name="email_login" class="register_input" required>
+               <label for="password_login" class="register_lable">Password</label>
+               <input type="password" id="password_login"  name="password_login"  class="register_input" minlength="8" required>
+               <input type="submit" value="Log In" class="register_button">
+            </form>
+            <div>
+               <div class="register_redirect">
+                  <p class="register_paragraf">Don’t have an account?</p>
+                  <a href="openModal_register" class="register_link">Register</a>
+               </div>
+            </div>
          </div>
       </div>
-       </div>
-       </div>
-
-
-       <!-- Register -->
-       <div id="openModal_register" class="register_modal">
+      <!-- Register -->
+      <div id="openModal_register" class="register_modal">
          <div class="modal-content_register">
-           <span class="close">&times;</span>
-           <h4 class="login_title">Register</h4>
-           <form class="register-form">
-           <label for="first_name" class="register_lable">First name</label>
-            <input type="text" id="first_name" name="first_name" class="register_input" required>
-           <label for="last_name" class="register_lable">Last name</label>
-            <input type="text" id="last_name" name="last_name" class="register_input" required>
-           <label for="email_register" class="register_lable">E-mail</label>
-            <input type="email" id="email_register" name="email_register" class="register_input" required>
-           <label for="password_register" class="register_lable">Password</label>
-            <input type="password" id="password_register" name="password_register" class="register_input" minlength="8" required>
-           <input type="submit" value="Sign Up" class="register_button">
-         </form>
-         <div>
-            <div class="register_redirect">
-         <p class="register_paragraf">Already have an account?</p>
-         <a href="openModal_login" class="register_link">Login</a>
+            <span class="close">&times;</span>
+            <h4 class="login_title">Register</h4>
+            <form class="register-form">
+               <label for="first_name" class="register_lable">First name</label>
+               <input type="text" id="first_name" name="first_name" class="register_input" required>
+               <label for="last_name" class="register_lable">Last name</label>
+               <input type="text" id="last_name" name="last_name" class="register_input" required>
+               <label for="email_register" class="register_lable">E-mail</label>
+               <input type="email" id="email_register" name="email_register" class="register_input" required>
+               <label for="password_register" class="register_lable">Password</label>
+               <input type="password" id="password_register" name="password_register" class="register_input" minlength="8" required>
+               <input type="submit" value="Sign Up" class="register_button">
+            </form>
+            <div>
+               <div class="register_redirect">
+                  <p class="register_paragraf">Already have an account?</p>
+                  <a href="openModal_login" class="register_link">Login</a>
+               </div>
+            </div>
          </div>
       </div>
-       </div>
-       </div>
-
-        <!-- BUY A LIBRARY CARD -->
-        <div class="buy_modal">
+      <!-- BUY A LIBRARY CARD -->
+      <div class="buy_modal">
          <div class="modal-content_buy">
-         <div class="buy_header">
-         <span class="close_buy">&times;</span>
-         <h4 class="buy_title">Buy a library card</h4>
+            <div class="buy_header">
+               <span class="close_buy">&times;</span>
+               <h4 class="buy_title">Buy a library card</h4>
+            </div>
+            <div class="form_and_description">
+               <div class="modal_buy_form">
+                  <form class="buy_form">
+                     <label for="bank_card_number" class="buy_lable">Bank card number</label>
+                     <input type="text" id="bank_card_number" name="bank_card_number" class="buy_input" required>
+                     <label for="expiration_code" class="buy_lable">Expiration code</label><br>
+                     <input type="text" id="expiration_code" name="expiration_code_1" class="cvc_input" required>
+                     <input type="text" id="expiration_code" name="expiration_code_2" class="cvc_input" required><br>
+                     <label for="cvc" class="buy_lable">CVC</label><br>          
+                     <input type="text" id="cvc" name="cvc" class="cvc_input" required><br>
+                     <div class="align_buy"><label for="cardholder_name" class="buy_lable">Cardholder name</label>
+                        <input type="text" id="cardholder_name" name="cardholder_name" class="buy_input"  required>
+                     </div>
+                     <label for="postal_code" class="buy_lable">Postal code</label>
+                     <input type="text" id="postal_code" name="postal_code" class="buy_input" required>
+                     <label for="city_town" class="buy_lable">City / Town</label>
+                     <input type="text" id="city_town" name="city_town" class="buy_input"  required>
+                     <input type="submit" value="Buy" class="buy_button">
+                     <div class="buy_price">$ 25.00</div>
+                  </form>
+               </div>
+               <div class="buy_description">
+                  <p class="buy_description_text">If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+                  </p>
+               </div>
+            </div>
          </div>
-         <div class="form_and_description">
-         <div class="modal_buy_form">
-           <form class="buy_form">
-            <label for="bank_card_number" class="buy_lable">Bank card number</label>
-            <input type="text" id="bank_card_number" name="bank_card_number" class="buy_input" required>
-           <label for="expiration_code" class="buy_lable">Expiration code</label><br>
-            <input type="text" id="expiration_code" name="expiration_code_1" class="cvc_input" required>
-            <input type="text" id="expiration_code" name="expiration_code_2" class="cvc_input" required><br>
-           <label for="cvc" class="buy_lable">CVC</label><br>          
-            <input type="text" id="cvc" name="cvc" class="cvc_input" required><br>
-            <div class="align_buy"><label for="cardholder_name" class="buy_lable">Cardholder name</label>
-            <input type="text" id="cardholder_name" name="cardholder_name" class="buy_input"  required>
-         </div>
-            <label for="postal_code" class="buy_lable">Postal code</label>
-            <input type="text" id="postal_code" name="postal_code" class="buy_input" required>
-           <label for="city_town" class="buy_lable">City / Town</label>
-            <input type="text" id="city_town" name="city_town" class="buy_input"  required>
-           <input type="submit" value="Buy" class="buy_button">
-           <div class="buy_price">$ 25.00</div>
-           </form>
-         </div>
-           <div class="buy_description">
-            <p class="buy_description_text">If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
-            </p>
-           </div>
-         </div>
-         </div>
-        </div>
-
-        <!-- modal profile -->
-        <div class="profile_modal">
+      </div>
+      <!-- modal profile -->
+      <div class="profile_modal">
          <div class="profile_modal_content">
             <div class="bg">
                <div class="avatar">
-                  <p>JD</p>                  
+                  <p>JD</p>
                </div>
                <div class="name_bg">
-             <p class="name_bg_p">John Doe</p>
+                  <p class="name_bg_p">John Doe</p>
+               </div>
             </div>
-         </div>
-              <div class="profile_info">
+            <div class="profile_info">
                <div class="profile_header">
-                   <h4 class="profile_title">My profile</h4>
+                  <h4 class="profile_title">My profile</h4>
                   <span class="profile_close">&times;</span>                 
                </div>
-             
-              <div class="cards_profile">
-               <div class="visits_info">
-                  <div class="visit_item">
-                    <p>Visits</p>
-                    <img src="assets/img/union.svg" alt="union" class="visit_img">
-                    <span>23</span>
+               <div class="cards_profile">
+                  <div class="visits_info">
+                     <div class="visit_item">
+                        <p>Visits</p>
+                        <img src="assets/img/union.svg" alt="union" class="visit_img">
+                        <span>23</span>
+                     </div>
+                     <div class="visit_item">
+                        <p>Bonuses</p>
+                        <img src="assets/img/star.svg" alt="union" class="visit_img">
+                        <span>23</span>
+                     </div>
+                     <div class="visit_item">
+                        <p>Books</p>
+                        <img src="assets/img/book.svg" alt="union" class="visit_img">
+                        <span>23</span>
+                     </div>
                   </div>
-                  <div class="visit_item">
-                     <p>Bonuses</p>
-                     <img src="assets/img/star.svg" alt="union" class="visit_img">
-                    <span>23</span>
-                  </div>
-                  <div class="visit_item">
-                     <p>Books</p>
-                     <img src="assets/img/book.svg" alt="union" class="visit_img">
-                    <span>23</span>
-                  </div> 
                </div>
-            </div> 
-            <br>
-               <ul class="rented_books">Rented books
-          <li class="rented_books_item">The Last Queen, Clive Irving</li>
-          <li class="rented_books_item align_item">Dominicana, Angie Cruz</li>
-         </ul>
-<div class="profile_card_number">
-   Card number <span class="prof_num">F00234030</span>  <img src="assets/img/copy.svg" alt="copy" class="copy_img">
-</div>
-
-              
+               <br>
+               <ul class="rented_books">
+                  Rented books
+                  <li class="rented_books_item">The Last Queen, Clive Irving</li>
+                  <li class="rented_books_item align_item">Dominicana, Angie Cruz</li>
+               </ul>
+               <div class="profile_card_number">
+                  Card number <span class="prof_num">F00234030</span>  <img src="assets/img/copy.svg" alt="copy" class="copy_img">
+               </div>
+            </div>
          </div>
-        </div>
-      </div> 
-
-
+      </div>
       <script src="index.js"></script>
    </body>
 </html>

@@ -1001,6 +1001,7 @@ letter-spacing: 0.4px;
 .auth_buttons{
   position: absolute;
 right: 55px;
+display: block;
 }
 
 a{
@@ -1771,4 +1772,23 @@ left: 11px;
 .copy_img{
   position: relative;
   left: 20px;
+}
+
+.input_card{
+  color: #BB945F;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+}
+
+.visibility{
+  display: none;
+}
+
+.auth_button_profile{
+  display: none;
+
 }

@@ -134,6 +134,14 @@ document.onclick = function (e) {
     document.querySelector(".icon_profile").innerHTML=`<span class="icon_auth">${iconLetters}</span>`;
     document.querySelector(".icon_profile").classList.toggle("icon_no_auth");
 
+    document.getElementById('card_form_name').value = `${firstName} ${lastName}`;
+	document.getElementById('card_form_number').value = `${cardNumber}`;
+    document.querySelector('.card_button').style.display = "none"; 
+    document.querySelector('.visibility').style.display = "block";
+
+    document.querySelector('.auth_button_login').style.display = "none"; 
+    document.querySelector('.auth_button_signup').style.display = "none"; 
+    document.querySelector('.auth_button_profile').style.display = "block"; 
     modalRegister.style.display = "none";
 }
 
@@ -177,7 +185,15 @@ function handleSubmitLogin(event){
           console.log(iconLetters);
           document.querySelector(".icon_profile").innerHTML=`<span class="icon_auth">${iconLetters}</span>`;
           document.querySelector(".icon_profile").classList.toggle("icon_no_auth");
-      
+          document.getElementById('card_form_name').value = `${currentUser.firstName} ${currentUser.lastName}`;
+	      document.getElementById('card_form_number').value = `${currentUser.cardNumber}`;
+	      document.querySelector('.card_button').style.display = "none"; 
+	      document.querySelector('.visibility').style.display = "block";
+
+          document.querySelector('.auth_button_login').style.display = "none"; 
+          document.querySelector('.auth_button_signup').style.display = "none"; 
+          document.querySelector('.auth_button_profile').style.display = "block"; 
+
           modalLogin.style.display = "none";
        }
     } 
@@ -226,7 +242,7 @@ function showSlides(n) {
 document.querySelectorAll('.button_buy').forEach(s=>s.addEventListener("click", handleBuy));
 document.querySelector('.auth_button_login').addEventListener("click", handleBuy);
 document.querySelector('.auth_button_signup').addEventListener("click", handleReg);
-document.querySelector('.auth_button_signup').addEventListener("click", handleReg);
+document.querySelector('.auth_button_profile').addEventListener("click", handleProfile);
 
 function handleBuy(event){
 if(!isLoging){
@@ -235,11 +251,22 @@ if(!isLoging){
     modalBuy.style.display = "block";
 }
 }
+
 function handleReg(event){
 if(!isLoging){
     modalRegister.style.display = "block";
 }
 }
+
+function handleProfile(event){
+    if(isLoging){
+        modalProfile.style.display  = "block";
+    }
+    }
+
+
+
+
 
 
 
