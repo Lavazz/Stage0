@@ -1,5 +1,6 @@
 let isLoging=false;
 let currentUser={};
+let currentVisit=0;
 
 // Получить модальный
 let modalRegister = document.querySelector('.register_modal');
@@ -113,20 +114,29 @@ document.onclick = function (e) {
         cardNumber: cardNumber
     };
 
+    let newVisit={
+        email: email, 
+        visit: 1
+    }
+
     console.log(newUser);
     let users = [];
+    let visits = [];
     let usersFromStorage=JSON.parse(window.localStorage.getItem("users"));
+    let visitsFromStorage=JSON.parse(window.localStorage.getItem("visits"));
     if(usersFromStorage){
     usersFromStorage.push(newUser);
     window.localStorage.setItem("users", JSON.stringify(usersFromStorage));
+    visitsFromStorage.push(newVisit);
+    window.localStorage.setItem("visits", JSON.stringify(visits));
     }else{
         users.push(newUser);
+        visits.push(newVisit);
         window.localStorage.setItem("users", JSON.stringify(users));
+        window.localStorage.setItem("visits", JSON.stringify(visits));
     }
-
-	
     isLoging=true;
-
+    currentVisit=1;
     currentUser=newUser;
 
     const iconLetters=(firstName.substring(0, 1)+lastName.substring(0, 1)).toUpperCase();
@@ -142,6 +152,10 @@ document.onclick = function (e) {
     document.querySelector('.auth_button_login').style.display = "none"; 
     document.querySelector('.auth_button_signup').style.display = "none"; 
     document.querySelector('.auth_button_profile').style.display = "block"; 
+
+    document.getElementById('visit_count_1').value = `${currentVisit}`; 
+    document.getElementById('visit_count_2').value = `${currentVisit}`; 
+    
     modalRegister.style.display = "none";
 }
 
@@ -165,21 +179,25 @@ function handleSubmitLogin(event){
     console.log(`emailFromUser: ${email}`);
 
     let usersFromStorage= JSON.parse(window.localStorage.getItem("users"));
+    let visitsFromStorage= JSON.parse(window.localStorage.getItem("visits"));
     console.log(`usersFromStorage: ${usersFromStorage}`);
-    console.log(usersFromStorage);
+    console.log(`visitsFromStorage: ${visitsFromStorage}`);
     if(usersFromStorage){
        
     // currentUser = usersFromStorage.filter(u=>u.email===email && u.password===password.toString())[0];
     currentUser = usersFromStorage.filter(u=>{
         console.log(`u.email: ${u.email} ===${email}` );
-        console.log(`u.email: ${u.password} ===${password}` );
-        console.log(u.email===email && u.password===password.toString());
 
      return  u.email===email && u.password===password.toString()})[0];
    
           if(currentUser){ 
               console.log(`currentUser: ${currentUser}`);
-              isLoging=true;
+              isLoging=true;              
+              currentVisit=(visitsFromStorage.find(x => x.email === currentUser.email).visit)+1;
+
+             let visits=visitsFromStorage.map(v=>v.email===currentUser.email  ? { ...v,  visit: currentVisit } : v);
+
+              window.localStorage.setItem("visits", JSON.stringify(visits));
          
           const iconLetters=(currentUser.firstName.substring(0, 1)+currentUser.lastName.substring(0, 1)).toUpperCase();
           console.log(iconLetters);
@@ -193,6 +211,9 @@ function handleSubmitLogin(event){
           document.querySelector('.auth_button_login').style.display = "none"; 
           document.querySelector('.auth_button_signup').style.display = "none"; 
           document.querySelector('.auth_button_profile').style.display = "block"; 
+
+          document.querySelector('.visit_count_1').innerHTML = `${currentVisit}`; 
+          document.querySelector('.visit_count_2').innerHTML = `${currentVisit}`; 
 
           modalLogin.style.display = "none";
        }
@@ -263,6 +284,10 @@ function handleProfile(event){
         modalProfile.style.display  = "block";
     }
     }
+
+    //visits
+
+
 
 
 
