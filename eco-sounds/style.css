@@ -1,8 +1,12 @@
 .header{
 height: 60px;
-display: flex;
-flex-direction: row;
+max-width: 1920px;
 background-color: black;
+}
+
+.logo{
+    margin-left: 300px;
+    margin-top: 5px;
 }
 
 .main{
@@ -17,12 +21,11 @@ background-color: black;
     background-color: black;
     }
 
-/* .header_wrapper{
-    height: 60px;
+.header_wrapper{
     display: flex;
     flex-direction: row;
     }
     
-    .main_wrapper{
+ /*   .main_wrapper{
         background-image: url("assets/img/forest.jpg");
     } */
