@@ -1,0 +1,28 @@
+.header{
+height: 60px;
+display: flex;
+flex-direction: row;
+background-color: black;
+}
+
+.main{
+    background-image: url("assets/img/forest.jpg");
+    height: calc(100vh - 120px);
+}
+
+.footer{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    }
+
+/* .header_wrapper{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    }
+    
+    .main_wrapper{
+        background-image: url("assets/img/forest.jpg");
+    } */
