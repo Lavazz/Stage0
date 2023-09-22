@@ -1,18 +1,70 @@
 .header{
 height: 60px;
-max-width: 1920px;
+max-width: 100%;
 background-color: black;
 }
 
+.header_wrapper{
+    margin-left: 240px;
+    margin-right: 240px;
+    display: flex;
+    flex-direction: row;
+    /* gap: 605px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
 .logo{
-    margin-left: 300px;
+    /* margin-left: 300px; */
     margin-top: 5px;
+}
+
+.nav{
+    margin-left: auto;
+}
+
+.nav_items{
+    display: flex;
+    flex-direction: row;  
+    color: white;
+}
+
+li {
+    list-style-type: none; 
+   }
+
+.nav_item{
+padding-left: 20px; 
+padding-right: 20px; 
 }
 
 .main{
     background-image: url("assets/img/forest.jpg");
     height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+   /* .main_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+    } */
+
+ button{
+    background-image: url(assets/svg/play.svg);
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    background-color: transparent;
+    border:none;
+}
+
+.pause {  
+    background-image: url(assets/svg/pause.svg);
+  }
 
 .footer{
     height: 60px;
@@ -21,11 +73,5 @@ background-color: black;
     background-color: black;
     }
 
-.header_wrapper{
-    display: flex;
-    flex-direction: row;
-    }
+
     
- /*   .main_wrapper{
-        background-image: url("assets/img/forest.jpg");
-    } */
