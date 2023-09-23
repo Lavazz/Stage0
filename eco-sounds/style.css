@@ -1,3 +1,17 @@
+:root {
+    --brown: #bdae82;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth; 
+  }
+  
 .header{
 height: 60px;
 max-width: 100%;
@@ -5,18 +19,16 @@ background-color: black;
 }
 
 .header_wrapper{
-    margin-left: 240px;
-    margin-right: 240px;
+    margin-left: 48px;
+    margin-right: 35px;
     display: flex;
     flex-direction: row;
-    /* gap: 605px; */
     padding-left: 20px;
     padding-right: 20px;
     }
 
 .logo{
-    /* margin-left: 300px; */
-    margin-top: 5px;
+
 }
 
 .nav{
@@ -27,6 +39,10 @@ background-color: black;
     display: flex;
     flex-direction: row;  
     color: white;
+    font-size: 20px;
+    padding-top: 9px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
 }
 
 li {
@@ -44,14 +60,8 @@ padding-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
 }
-
-   /* .main_wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 120px);
-    } */
 
  button{
     background-image: url(assets/svg/play.svg);
@@ -68,10 +78,70 @@ padding-right: 20px;
 
 .footer{
     height: 60px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    }
+
+    .footer_wripper{
+    margin-left: 68px;
+    margin-right: 68px;
     display: flex;
     flex-direction: row;
-    background-color: black;
+    width: calc(100hv - 40px);
     }
+
+    .rss_logo{
+    width: 135px;
+    height: 50px;
+    margin-top: -15px;    
+    }
+
+    .rss_logo:hover {
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+      }
+
+    .rss_link{
+        margin-left: auto;
+    }
+
+    .footer_caption{
+        font-size: 20px;
+        padding-top: 19px;
+        padding-right: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .footer_wripper a {
+        color: #FFFFFF;
+        text-decoration: none;
+        padding-top: 20px;
+    }
+
+    .footer_caption:hover {
+        color:  var(--brown); 
+      }
+
+      .nav_item:hover {
+        color:  var(--brown); 
+      }
+
+      .active{
+        color:  var(--brown);
+      }
+
+      .logo.active{
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+  contrast(87%);
+      }
+
+      .logo:hover{
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+      }
+      
 
 
     
