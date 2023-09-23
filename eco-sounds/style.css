@@ -1,0 +1,147 @@
+:root {
+    --brown: #bdae82;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth; 
+  }
+  
+.header{
+height: 60px;
+max-width: 100%;
+background-color: black;
+}
+
+.header_wrapper{
+    margin-left: 48px;
+    margin-right: 35px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+.logo{
+
+}
+
+.nav{
+    margin-left: auto;
+}
+
+.nav_items{
+    display: flex;
+    flex-direction: row;  
+    color: white;
+    font-size: 20px;
+    padding-top: 9px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
+}
+
+li {
+    list-style-type: none; 
+   }
+
+.nav_item{
+padding-left: 20px; 
+padding-right: 20px; 
+}
+
+.main{
+    background-image: url("assets/img/forest.jpg");
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+ button{
+    background-image: url(assets/svg/play.svg);
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    background-color: transparent;
+    border:none;
+}
+
+.pause {  
+    background-image: url(assets/svg/pause.svg);
+  }
+
+.footer{
+    height: 60px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    }
+
+    .footer_wripper{
+    margin-left: 68px;
+    margin-right: 68px;
+    display: flex;
+    flex-direction: row;
+    width: calc(100hv - 40px);
+    }
+
+    .rss_logo{
+    width: 135px;
+    height: 50px;
+    margin-top: -15px;    
+    }
+
+    .rss_logo:hover {
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+      }
+
+    .rss_link{
+        margin-left: auto;
+    }
+
+    .footer_caption{
+        font-size: 20px;
+        padding-top: 19px;
+        padding-right: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .footer_wripper a {
+        color: #FFFFFF;
+        text-decoration: none;
+        padding-top: 20px;
+    }
+
+    .footer_caption:hover {
+        color:  var(--brown); 
+      }
+
+      .nav_item:hover {
+        color:  var(--brown); 
+      }
+
+      .active{
+        color:  var(--brown);
+      }
+
+      .logo.active{
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+  contrast(87%);
+      }
+
+      .logo:hover{
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+      }
+      
+
+
+    
