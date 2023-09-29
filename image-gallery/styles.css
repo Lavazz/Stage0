@@ -23,7 +23,7 @@
     background-color: black;
     }
 
-    .search{
+    .search_form{
         margin-left: auto;
         width: fit-content;
     }
@@ -33,7 +33,7 @@
         height: 30px;
     }
 
-    .search_input{
+    .search{
      height: 30px;
      margin: 5px;
     }
