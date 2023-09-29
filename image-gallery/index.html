@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>image-gallery</title>
 </head>
 <body>
-    <main>
-        image-gallery
+   <div class="wripper">
+    <header class="header">
+        <form action="" method="get" class="search" autocomplete="off">
+            <input name=search_criteria placeholder="Search..." type="search" class="search_input" autofocus>
+            <button type="submit"><img src="assets/svg/search.svg" class="search_svg"></button>
+        </form>
+
+    </header>
+    <main class="main">       
+        <div class="images"></div>         
     </main>
+    <footer class="footer"> 
+        <div class="footer_wripper">
+            <span class="footer_caption">©</span>     
+            <span class="footer_caption">2023</span>
+            <a href="https://github.com/Lavazz" target="_blank"><span class="footer_caption">github</span></a>
+            <a href="https://rs.school/js/" target="_blank" class="rss_link">
+                <img src="assets/svg/rss-logo.svg" alt="rss-logo" class="rss_logo">
+            </a>   
+    </div> 
+    </footer>
+</div>
     <script src="index.js"></script>   
 </body>
 </html>
