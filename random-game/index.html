@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snake</title>
+    <link rel="stylesheet" href="stiles.css">
 </head>
 <body>
-    NEW GAME
+    <main>
+    <p class="score">Score: <span class="score_value">0</span></p>
+    <canvas id="snake" width="576" height="576">
+    </canvas>
+    </main>
+    <footer class="footer"> 
+        <div class="footer_wripper">
+            <span class="footer_caption">©</span>     
+            <span class="footer_caption">2023</span>
+            <a href="https://github.com/Lavazz" target="_blank"><span class="footer_caption">github</span></a>
+            <a href="https://rs.school/js/" target="_blank" class="rss_link">
+                <img src="assets/rss_logo.svg" alt="rss-logo" class="rss_logo">
+            </a>   
+    </div> 
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
