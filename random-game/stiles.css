@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    height: 100%; 
+  }
+
+body{
+    background-color: rgb(29, 29, 122);
+}
+
+main{
+    height: calc(100vh - 70px);
+}
+
+#snake{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #b3c2da;
+    display: block;
+    margin: 0 auto;
+}
+
+.score{
+    color: beige;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 85px;
+    margin-top: 10px;
+}
+
+
+.footer{
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    }
+
+    .footer_wripper{
+    margin-left: 68px;
+    margin-right: 68px;
+    display: flex;
+    flex-direction: row;
+    }
+
+    .rss_logo{
+    width: 135px;
+    height: 50px;
+    margin-top: -15px;    
+    }
+
+    .rss_logo:hover {
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+      }
+
+    .rss_link{
+        margin-left: auto;
+    }
+
+    .footer_caption{
+        font-size: 20px;
+        padding-top: 19px;
+        padding-right: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .footer_wripper a {
+        color: #FFFFFF;
+        text-decoration: none;
+        padding-top: 20px;
+    }
+
+    .footer_caption:hover {
+        color:  var(--brown); 
+      }
+
+      .logo.active{
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+  contrast(87%);
+      }
+
+      .logo:hover{
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+      }
