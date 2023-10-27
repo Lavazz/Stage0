@@ -37,6 +37,8 @@ function setDirection(e){
 }
 
 function addFood(){
+    ctx.fillStyle = '#b3c2da';
+    ctx.fillRect(0, 0, 576, 576);
     ctx.drawImage(foodImg,  food.x, food.y);
     
     for(let i=0; i<snake.length; i++){
